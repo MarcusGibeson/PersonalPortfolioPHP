@@ -9,14 +9,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<, initial-scale=1.0">
-    <title>Document</title>
+    <title>Marcus' Projects</title>
 </head>
 <body>
     <section class="main">
         <div class="container">
             <div id="box">
-                <p>This is the projects page</p>
-
                 <div class="clearfix">
                     <?php foreach ($projects as $index => $project): ?>
                         <?php if ($index % 2 == 0): ?>

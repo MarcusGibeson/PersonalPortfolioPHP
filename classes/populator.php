@@ -4,7 +4,7 @@ class PortfolioPopulator {
 
     public static function populateProjects() {
         //image placeholder
-        $image = "placeholder.png";
+        $image = "images/placeholder.png";
 
         //Portfolio arrays
         $portfolioContributors = ["Marcus Gibeson"];
@@ -88,6 +88,20 @@ class PortfolioPopulator {
                 "Complete",
                 $homeFamilyTaskContributors,
                 $homeFamilyTaskTags
+            ),
+            new Project(
+                "20 Sided Dice",
+                "A 20-side dice simulator that always records rolls in a database. Complete with database wipe and weighted rolls option",
+                $image,
+                $image,
+                "Project Link URL here",
+                "GITHUB URL here",
+                $diceTechUsed,
+                "2023-12-14",
+                "2024-8-18",
+                "Complete",
+                $diceContributors,
+                $diceTags
             ),
 
         ];

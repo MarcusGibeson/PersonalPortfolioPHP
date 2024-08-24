@@ -36,7 +36,7 @@
         .good { background-color: #ff9800;}
         .needs-improvement { background-color: #f44336;}
     </style>
-    <title>Document</title>
+    <title>Marcus' Skills</title>
 </head>
 <body>
 <section class="main">
