@@ -1,0 +1,60 @@
+        
+#projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-item {
+    text-align: center;
+    cursor: pointer;
+}
+
+.project-image {
+    width: 200px;
+    border-radius: 8px;
+}
+
+.modal {
+    display: none;
+    position: absolute; /* Use absolute to position it relative to the cursor */
+    z-index: 1000;
+    width: 600px; /* Fixed width */
+    height: 600px; /* Fixed height */
+    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Optional: add a shadow */
+    overflow: auto; /* Allow scrolling if content overflows */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.modal-content {
+    padding: 20px;
+    height: 100%; /* Ensure content fills the modal */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+#modal-details img {
+    max-width: 100%; /* Ensure images don't overflow the modal */
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    #projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

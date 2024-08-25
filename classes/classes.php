@@ -16,7 +16,8 @@ class Project {
     private $tags = [];
 
 
-    public function __construct($title, $description, $imgLink, $gifLink, $projectUrl, $repoUrl, $technologiesUsed, $startDate, $endDate, $status, $contributors, $tags) {
+    public function __construct($id, $title, $description, $imgLink, $gifLink, $projectUrl, $repoUrl, $technologiesUsed, $startDate, $endDate, $status, $contributors, $tags) {
+        $this->id = $id;
         $this->title = $title;
         $this->description = $description;
         $this->imgLink = $imgLink;
@@ -71,6 +72,22 @@ class Project {
     public function getTags() {
         return $this->tags;
     }
+
+    // public function toArray() {
+    //     return [
+    //         'title'=> $this->title,
+    //         'description'=> $this->description,
+    //         'imgLink' => $this->imgLink,
+    //         'gifLink' => $this->gifLink,
+    //         'projectUrl' => $this->projectUrl,
+    //         'repoUrl' => $this->technologiesUsed,
+    //         'startDate' => $this->startDate,
+    //         'endDate' => $this->endDate,
+    //         'status' => $this->status,
+    //         'contributors' => $this->contributors,
+    //         'tags' => $this->tags
+    //     ];
+    // }
 }
 
 class Skill {

@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-<script>
+<!-- <script>
         // Load content function for dynamic web pages
         function loadContent(fragmentName) {
             var url = fragmentName + '.php';
@@ -32,6 +32,8 @@
                     console.log('Error', error);
                 });
         }
+
+
     
         // Add event listener to monitor dynamic-content switch
         document.addEventListener('DOMContentLoaded', function() {
@@ -55,7 +57,10 @@
                 link.addEventListener('click', handleClickEvent);
             });
         });
-    </script>
+
+        
+    </script> -->
+    
     <link rel="stylesheet" href="css/style.css">
     <title>Marcus Gibeson</title>
 </head>

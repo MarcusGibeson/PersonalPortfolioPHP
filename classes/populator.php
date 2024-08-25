@@ -32,8 +32,12 @@ class PortfolioPopulator {
         $diceContributors = ["Marcus Gibeson"];
         $diceTechUsed = ["PHP", "SQL", "HTML", "CSS", "JavaScript"];
         $diceTags = ["Web Program", "PHP", "SQL", "HTML", "CSS"];
+
+
+
         return [
             new Project(
+                1,
                 "Personal Portfolio",
                 "My personal portfolio of all my projects",
                 $image,
@@ -48,6 +52,7 @@ class PortfolioPopulator {
                 $portfolioTags
             ),
             new Project(
+                2,
                 "Asteroid Xtreme",
                 "description here", 
                 $image,
@@ -62,6 +67,7 @@ class PortfolioPopulator {
                 $asteroidTags
             ),
             new Project(
+                3,
                 "Pacman Xtreme",
                 "description here",
                 $image,
@@ -76,6 +82,7 @@ class PortfolioPopulator {
                 $pacmanTags
             ),
             new Project(
+                4,
                 "Home & Family Task",
                 "A chore task manager set up as a website for use for people who want to create a chore list for people in the house.",
                 $image,
@@ -90,6 +97,7 @@ class PortfolioPopulator {
                 $homeFamilyTaskTags
             ),
             new Project(
+                5,
                 "20 Sided Dice",
                 "A 20-side dice simulator that always records rolls in a database. Complete with database wipe and weighted rolls option",
                 $image,
@@ -105,6 +113,11 @@ class PortfolioPopulator {
             ),
 
         ];
+
+                // // Convert each project to an array
+        // return array_map(function($project) {
+        //     return $project->toArray();
+        // }, $projects);
     }
 
     public static function populateSkills() {
