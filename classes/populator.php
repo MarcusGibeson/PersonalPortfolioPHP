@@ -114,10 +114,6 @@ class PortfolioPopulator {
 
         ];
 
-                // // Convert each project to an array
-        // return array_map(function($project) {
-        //     return $project->toArray();
-        // }, $projects);
     }
 
     public static function populateSkills() {

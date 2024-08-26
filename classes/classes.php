@@ -1,6 +1,6 @@
 <?php
 
-class Project {
+class Project implements JsonSerializable{
     private $id;
     private $title;
     private $description;
@@ -73,21 +73,22 @@ class Project {
         return $this->tags;
     }
 
-    // public function toArray() {
-    //     return [
-    //         'title'=> $this->title,
-    //         'description'=> $this->description,
-    //         'imgLink' => $this->imgLink,
-    //         'gifLink' => $this->gifLink,
-    //         'projectUrl' => $this->projectUrl,
-    //         'repoUrl' => $this->technologiesUsed,
-    //         'startDate' => $this->startDate,
-    //         'endDate' => $this->endDate,
-    //         'status' => $this->status,
-    //         'contributors' => $this->contributors,
-    //         'tags' => $this->tags
-    //     ];
-    // }
+    public function jsonSerialize() {
+        return [
+            'title'=> $this->title,
+            'description'=> $this->description,
+            'imgLink' => $this->imgLink,
+            'gifLink' => $this->gifLink,
+            'projectUrl' => $this->projectUrl,
+            'repoUrl' => $this->repoUrl,
+            'technologiesUsed' => $this->technologiesUsed,
+            'startDate' => $this->startDate,
+            'endDate' => $this->endDate,
+            'status' => $this->status,
+            'contributors' => $this->contributors,
+            'tags' => $this->tags
+        ];
+    }
 }
 
 class Skill {

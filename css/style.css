@@ -46,12 +46,23 @@ body, html {
     font-size: 18px;
 }
 
+#my-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:30%;
+    background-color: rgb(30, 201, 220);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 /* Navigation Bar */
 .navigation-bar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 70%;
     background-color: #333;
     overflow: hidden;
     display: flex; /* Added */
