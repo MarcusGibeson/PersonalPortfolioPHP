@@ -2,6 +2,7 @@
 
 class PortfolioPopulator {
 
+
     public static function populateProjects() {
         //image placeholder
         $image = "images/placeholder.png";
@@ -33,7 +34,20 @@ class PortfolioPopulator {
         $diceTechUsed = ["PHP", "SQL", "HTML", "CSS", "JavaScript"];
         $diceTags = ["Web Program", "PHP", "SQL", "HTML", "CSS"];
 
+        //Donut Clicker
+        $donutContributors = ["Marcus Gibeson"];
+        $donutTechUsed = ["HTML", "CSS", "JavaScript"];
+        $donutTags = ["JavaScript", "HTML", "CSS", "Game"];
 
+        //Virtual Pet
+        $petContributors = ["Marcus Gibeson"];
+        $petTechUsed = ["Java"];
+        $petTags = ["Java", "Command Console", "Game"];
+
+        //Virtual Pets Amok
+        $amokContributors = ["Marcus Gibeson", "Timothy Asberry", "Lukretia Deacon", "Kerwyn Daniel", "Jose Carmona"];
+        $amokTechUsed = ["HTML", "Java"];
+        $amokTags = ["HTML", "Java", "Springboot", "Maven", "Web Program"];
 
         return [
             new Project(
@@ -111,7 +125,51 @@ class PortfolioPopulator {
                 $diceContributors,
                 $diceTags
             ),
-
+            new Project(
+                6,
+                "Donut Clicker",
+                "Create a clicker game using a donut and using it to spend on buying upgrades",
+                "images/projects/donut_clicker.jpg",
+                $image,
+                "Project Link URL here",
+                "GITHUB URL here",
+                $donutTechUsed,
+                "2023-6-10",
+                "2023-6-18",
+                "Complete",
+                $donutContributors,
+                $donutTags
+            ),
+            new Project(
+                7,
+                "Virtual Pet",
+                "Tamadachi-style game to care for a pet, command console-only",
+                $image,
+                $image,
+                "Project Link URL here",
+                "GITHUB URL here",
+                $petTechUsed,
+                "2023-6-24",
+                "2023-7-2",
+                "Complete",
+                $petContributors,
+                $petTags
+            ),
+            new Project(
+                8,
+                "Virtual Pets Amok",
+                "First group project to create a Vet clinic simulator to handle CRUD operations",
+                $image,
+                $image,
+                "Project Link URL here",
+                "GITHUB URL here",
+                $amokTechUsed,
+                "2023-7-14",
+                "2023-8-12",
+                "Complete",
+                $amokContributors,
+                $amokTags
+            ),
         ];
 
     }

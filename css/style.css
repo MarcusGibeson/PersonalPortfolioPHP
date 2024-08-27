@@ -1,11 +1,7 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height:100%;
-}
+
 
 #main {
-    margin-top: 75px; /* Adjust this value based on navigation bar height */
+    margin-top: 100px; /* Adjust this value based on the navigation bar height */
 }
 
 .main {
@@ -34,10 +30,11 @@ body, html {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Make content stretch */
+    justify-content: space-between;
     height: 100%;
-    flex-grow: 1; /* Ensure #box takes remaining space */
+    flex-grow: 1;
     box-sizing: border-box;
+    border: 2px solid #ff4500; /* Red border for #box */
 }
 
 #box p {
@@ -46,76 +43,85 @@ body, html {
     font-size: 18px;
 }
 
-#my-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width:30%;
-    background-color: rgb(30, 201, 220);
-    overflow: hidden;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+
+
 /* Navigation Bar */
-.navigation-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 70%;
-    background-color: #333;
-    overflow: hidden;
-    display: flex; /* Added */
-    justify-content: space-around; /* Added */
-    align-items: center; /* Added */
-    padding: 10px 0;
-    z-index: 1000;
+
+
+/* Layout for left and right sections */
+
+
+
+
+/* Projects Grid */
+#projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.navigation-bar a {
-    display: block;
-    color: white;
+.project-item {
     text-align: center;
-    padding: 14px 16px;
+    cursor: pointer;
+    border: 2px solid #800080; /* Purple border for each project item */
+    background-color: rgba(128, 0, 128, 0.3); /* Purple with transparency */
+}
+
+.project-image {
+    width: 200px;
+    border-radius: 8px;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: var(--cursor-y);
+    left: var(--cursor-x);
+    transform: translate(-50%, -50%);
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 20px);
+    overflow-y: auto;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.modal-content {
+    padding: 20px;
+    border: 2px solid #ff69b4; /* Pink border for the modal content */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
     text-decoration: none;
 }
 
-.navigation-bar a:hover {
-    background-color: #ddd;
-    color: black;
+#modal-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-.navigation-bar .active a {
-    background-color: #4CAF50;
-    color: white;
-}
-
-
-/* Projects section*/
-
-.project-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-grow: 1;
-}
-
-.img-url {
-    background-color: rgb(255, 255, 255);
-    padding: 5px;
-    border: 5px solid #ccc;
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-    .left-side-projects,
-    .right-side-projects {
+    #my-picture {
         width: 100%;
-        margin: 0 0 20px 0;
+        float: none;
+        height: auto; /* Adjust height for mobile view */
     }
-}
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+    
+    #projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
