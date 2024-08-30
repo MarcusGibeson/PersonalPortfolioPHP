@@ -34,7 +34,7 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            width: 30%; /* 30% of the width */
+            width: 40%; /* 30% of the width */
             box-sizing: border-box;
             padding: 20px;
             background-color: rgba(255, 165, 0, 0.3); /* Orange with transparency */
@@ -49,7 +49,7 @@
         }
 
         #navigation-content {
-            width: 70%; /* 70% of the width */
+            width: 60%; /* 70% of the width */
             display: flex;
             flex-direction: column;
         }
@@ -113,6 +113,10 @@
                     // Call initialization function based on the loaded fragment
                     if (fragmentName === 'projects') {
                         initializeProjects();
+                    } else if (fragmentName === 'aboutMe') {
+                        initializeCarousel();
+                    } else if (fragmentName === 'skills') {
+                        initializeSkills();
                     }
                 })
                 .catch(function(error) {
@@ -195,6 +199,42 @@
         document.getElementById('project-modal').style.display = 'none';
     });
 }
+        function initializeCarousel() {
+            const carouselContainer = document.querySelector('.carousel-container');
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            const leftArrow = document.querySelector('.left-arrow');
+            const rightArrow = document.querySelector('.right-arrow');
+
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                const offset = -currentIndex * 100;
+                carouselContainer.style.transform = `translateX(${offset}%)`;
+            }
+
+            rightArrow.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % carouselItems.length;
+                updateCarousel();
+            });
+
+            leftArrow.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+                updateCarousel();
+            });
+        }
+
+        function initializeSkills() {
+    console.log('Initializing Skills...');
+
+    const skillBars = document.querySelectorAll('.bar-fill');
+
+    skillBars.forEach((bar, index) => {
+        const direction = index % 2 === 0 ? 'slide-in-left' : 'slide-in-right';
+        bar.classList.add(direction);
+    });
+}
+
+
     </script>
 </head>
 <body>
@@ -205,7 +245,7 @@
             </div>
             <div class="my_picture">
                 <!-- Placeholder for image -->
-                <img src="images/Image_of_me.jpg" alt="Me!" height="900" width="600">
+                <img src="images/Image_of_me.jpg" alt="Me!" height="800" width="650">
             </div>
             <div class="my-picture-slogan">
             <h3>Building myself up one code block at a time</h3>

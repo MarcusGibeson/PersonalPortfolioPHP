@@ -11,6 +11,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<, initial-scale=1.0">
     <style>
+        @keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
         .skills-list {
             list-style-type: none;
             padding: 0;
@@ -35,6 +56,14 @@
         .very-good { background-color: #2196f3;}
         .good { background-color: #ff9800;}
         .needs-improvement { background-color: #f44336;}
+
+        .bar-fill.slide-in-left {
+    animation: slideInFromLeft 1.5s forwards;
+}
+
+.bar-fill.slide-in-right {
+    animation: slideInFromRight 1.5s forwards;
+}
     </style>
     <title>Marcus' Skills</title>
 </head>

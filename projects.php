@@ -32,7 +32,7 @@
                 <?php foreach ($projects as $project): ?>
                     <div class="project-item">
                         <img src="<?= htmlspecialchars($project->getImgLink()) ?>" alt="Project Image" class="project-image">
-                        <p class="project-title"><?= htmlspecialchars($project->getTitle()) ?></p>
+                        <div class="project-title"><?= htmlspecialchars($project->getTitle()) ?></div>
                     </div>
                 <?php endforeach; ?>
             </div>
